@@ -149,7 +149,7 @@ class Universe():
                     self.setCell(x, y, 1)
 
 
-universeSize = [85, 65]
+universeSize = [85, 35]
 U = Universe(universeSize)
 print("Universe spawned: ", U.x, U.y)
 print("Turning on the light...")

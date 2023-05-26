@@ -1,3 +1,11 @@
+# Question to ChatGPT:
+# This version was an updated version of the initial question:
+# can you write a python class that runs Conways game of life?  Use Python 3.11.
+# The program should open a window, and display the results for each generation.
+#
+# As the initial version did not produce any output, I followed up with:
+# When I run this program, it does not show any output.
+
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation

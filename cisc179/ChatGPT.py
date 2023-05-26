@@ -1,3 +1,6 @@
+# Initial question was:
+# can you write a python class that runs conways game of life?
+
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation

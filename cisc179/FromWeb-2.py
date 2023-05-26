@@ -5,7 +5,8 @@
 # This uses numpy and slices to count neighbors and update each cell into a new array
 # similar to the chatGPT optimization...  Not sure that is more efficient than incrementing neighbors from my
 # approach, since calculating each cell's new state via slices requires 9 checks, plus a subtraction, meaning there
-# are ten operations per cell, even if it is wrapped up in a single line.  From a big-O perspective
+# are ten operations per cell, even if it is wrapped up in a single line.
+
 import pygame
 import numpy as np
 

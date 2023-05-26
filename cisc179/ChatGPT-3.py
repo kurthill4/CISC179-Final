@@ -1,6 +1,10 @@
 # The program was generated with the following question:
 # can you write a python class that runs Conways game of life?  Use Python 3.11.
 # The program should open a window, and display the results for each generation.
+#
+# Note I gave some more detailed instructions.  This is the first version
+# That produced output.
+
 
 
 import tkinter as tk

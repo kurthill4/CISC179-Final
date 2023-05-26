@@ -53,7 +53,7 @@ class Universe():
 
         # I think this has to be here as when I instantiate the class, it creates the
         # initial "trigger" to get into the update/go loop.
-        self.root.after(20, self.go)
+        self.root.after(2000, self.go)
 
     def resetCount(self):
         self.countArray = [[0 for y in range(self.y)] for x in range(self.x)]
@@ -114,6 +114,7 @@ class Universe():
         for idx in indices:
             x, y = np.unravel_index(idx, (self.x, self.y))
             self.setCell(x, y, 1)
+            self.livingArray.append((x, y))
 
     # This is the old-genesis.  ChatGPT provided a better genesys.
     def genisys(self):
@@ -142,13 +143,13 @@ class Universe():
 
     # testByList uses the living list array to update the counting array
     def testByList(self):
-        for x,y in self.livingArray:
+        for x, y in self.livingArray:
             self.updateNeighbors(x, y)
 
     def go(self):
         self.resetCount()
-        self.testByLoop()
-        #self.testByList()
+        #self.testByLoop()
+        self.testByList()
         self.livingArray = list()
 
         for y in range(self.y):
@@ -190,13 +191,13 @@ class Universe():
         self.root.mainloop()
 
 
-universeSize = [100, 100]
+universeSize = [200, 200]
 U = Universe(universeSize, 5)
 print("Universe spawned: ", U.x, U.y)
 print("Turning on the light...")
 #U.genisys()
-U.populate_grid(0.2)
-U.dumpLiving()
-U.dumpUniverse()
+U.populate_grid(0.5)
+#U.dumpLiving()
+#U.dumpUniverse()
 U.run()
 

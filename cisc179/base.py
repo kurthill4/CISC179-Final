@@ -128,6 +128,7 @@ class Universe():
         count = self.countArray
         for dy in range(-1, 2):
             for dx in range(-1, 2):
+                # Increment neighbors, but don't increment self (abs(dx or dy) will always be 0 or 1)
                 if x+dx in range(0, self.x) and y+dy in range(0, self.y) and (abs(dx)+abs(dy) != 0):
                     #print("dx, dy: ({}, {}), x, y: ({}, {})".format(dx, dy, x+dx, y+dy))
                     count[x+dx][y+dy] += 1

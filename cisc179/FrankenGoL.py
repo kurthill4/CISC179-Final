@@ -15,7 +15,7 @@ class Universe():
     # Universe expects a tuple/list with x,y dimensions
     # Class variables
     dumpOutput = " *"   # Use to print out array without using if/then...
-    def __new__(cls, size: tuple, cellsize):
+    def __new__(cls, size: tuple, cellsize: int):
         # Verify we are getting the universe we expect...
         if not ((type(size) is tuple) or (type(size) is list)):
             raise TypeError('Expected tuple or list.')
@@ -191,7 +191,7 @@ class Universe():
         self.root.mainloop()
 
 
-universeSize = [200, 200]
+universeSize = [100, 100]
 U = Universe(universeSize, 5)
 print("Universe spawned: ", U.x, U.y)
 print("Turning on the light...")
